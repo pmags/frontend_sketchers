@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,500;1,600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    
+    min-height: 100vh;
+}
+
+.left{
+    padding: 0 40px;
+    width: 60%;
+}
+
+.inner-container{
+    max-width: 500px;
+}
+
+.right{
+    width: 40%;
+}
+
+.bg-image{
+    background-image: url('/images/background-l.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo{
+    margin: 60px 0;
+    width: 30px;
+}
+
+.bg-mobile{
+    display: none;
+}
+
+h1{
+    font-size: 60px;
+    letter-spacing: 10px;
+    line-height: 1.1;
+    margin-bottom: 0;    
+    text-transform: uppercase;
+}
+
+p{
+    letter-spacing: 1px;
+    line-height: 25px;
+    max-width: 300px;
+    margin: 40px 0;
+}
+
+form{
+    position: relative;
+    max-width: 300px;
+}
+
+form.error{
+
+}
+
+input{
+    background-color: transparent;
+    border:1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    width: 100%;
+}
+
+input:focus,
+button:focus{
+    border-width: 2px;
+    box-shadow: 0px 0px 10px hsla(0, 36%, 79%, 0.5);
+    outline: none;
+}
+
+input::placeholder{
+    color:hsl(0, 36%, 70%)
+}
+
+form.error input{
+    border: 2px solid hsl(0, 93, 68);
+}
+
+button{
+    background-image: linear-gradient(135deg,hsl(0,0%,100%),hsl(0,74%,74%));
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: opacity 0.2s ease;
+    width: 100px;
+    height: 50px;
+}
+
+button:hover{
+    opacity: 0.6s;
+}
+
+
+small{
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+@media screen and (max-width: 800px){
+    
+    .logo{
+        margin: 30px 0;
+        width: 10px;
+    }
+    
+    .bg-mobile{
+        display: block;
+        margin-left: -40px;
+        margin-right: -40px;
+        width: calc(100% + 80px);
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+}
